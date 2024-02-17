@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Defines a base class for object creation with id assignment"""
 class Base:
     """
     Base class for object creation.
@@ -16,11 +17,10 @@ class Base:
         Constructor method
 
         Args:
-            id (int, optional): Identifier for the object, if not provided a unique Id will be assigned
+            id (int, optional): Identifier for the object, if not provided a unique id will be assigned
         """
-        super().__init__()
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objectm
+            self.id = Base.__nb_objects
