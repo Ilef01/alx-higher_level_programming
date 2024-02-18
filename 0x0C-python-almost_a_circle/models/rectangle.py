@@ -16,34 +16,42 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+    @property
     def width(self):
         """Getter for retrieving width"""
         return self.__width
 
+    @width.setter
     def width(self, value):
         """Setter for setting width"""
         self.__width = value
 
-    def heigth(self):
+    @property
+    def height(self):
         """Getter for retrieving height"""
         return self.__height
 
+    @height.setter
     def height(self, value):
         """Setter for setting height"""
         self.__height = value
 
-    def width(self):
+    @property
+    def x(self):
         """Getter for retrieving the x coordinate"""
         return self.__x
 
-    def width(self, value):
+    @x.setter
+    def x(self, value):
         """Setter for setting x"""
         self.__x = value
 
-    def width(self):
+    @property
+    def y(self):
         """Getter for retrieving the y coordinate"""
         return self.__y
 
-    def width(self, value):
+    @y.setter
+    def y(self, value):
         """Setter for setting y"""
         self.__y = value
