@@ -2,10 +2,11 @@
 
 """lists all states from a MYSQL database using MySQLdb"""
 
-import MySQLdb
-import sys
-
 if __name__ == '__main__':
+    import MySQLdb
+    import sys
+
+    """ Connecting to the database """
     db = MySQLdb.connect(
         host='localhost',
         port=3306,
@@ -13,10 +14,16 @@ if __name__ == '__main__':
         passwd=sys.argv[2],
         db=sys.argv[3]
     )
-cur = db.cursor()
-cur.execute("SELECT * FROM states ORDER BY id")
-rows = cur.fetchall()
-for row in rows:
-    print(row)
-cur.close()
-db.close()
+
+    """ Getting the cursor """
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id")
+
+    """ Obtaining query results """
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+
+    """ Closing the cursor and the database """
+    cur.close()
+    db.close()
