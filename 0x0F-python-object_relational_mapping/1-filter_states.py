@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-""" a script that lists all states with a name starting with N from the
-database hbtn_0e_0_usai
-    
-It takes 3 arguments : mysql username, mysql password and database name"""
+"""A script that lists all states with a name starting with N from the
+database hbtn_0e_0_usai.
+
+It takes 3 arguments : mysql username, mysql password and database name.
+"""
 
 if __name__ == '__main__':
     import MySQLdb
