@@ -20,7 +20,8 @@ if __name__ == '__main__':
     cur.execute(
             "SELECT cities.state_id, cities.name, states.name "
             "FROM cities "
-            "JOIN states ON cities.state_id = states.id"
+            "JOIN states ON cities.state_id = states.id "
+            "ORDER BY cities.id"
     )
 
     """ Obtaining query results """
