@@ -19,8 +19,8 @@ if __name__ == '__main__':
     """ Getting the cursor """
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states"
-        "WHERE name = '{}'"
+        "SELECT * FROM states "
+        "WHERE name = '{}' "
         "ORDER BY id"
         .format(sys.argv[4])
     )
