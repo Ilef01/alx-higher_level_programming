@@ -6,9 +6,9 @@ const file = process.argv[2];
 if (!file) {
   console.error('No file provided');
 }
-fs.readFile(file, 'utf-8', function (error, data) {
+fs.readFile(file, 'utf-8', function (error) {
   if (error) {
-    console.error('error:', error);
+    console.error('Error reading file: ', error);
     process.exit(1);
   }
   console.log(data);
